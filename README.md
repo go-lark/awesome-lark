@@ -1,4 +1,4 @@
-# awesome-lark <a href="https://github.com/sindresorhus/awesome"><img src="https://github.com/sindresorhus/awesome/raw/main/media/logo.svg" alt="Awesome" width="80" /></a>
+# awesome-lark [![Awesome](https://github.com/sindresorhus/awesome/raw/main/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
