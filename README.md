@@ -23,9 +23,14 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 - [larksuite/oapi-sdk-java](https://github.com/larksuite/oapi-sdk-java): Larksuite official Java SDK
 
-#### Node.js
+#### JavaScript
 
+- [dizys/lark-js-sdk](https://github.com/dizys/lark-js-sdk): Third-party JavaScript Lark (Feishu, 飞书) SDK written in TypeScript
 - [larksuite/oapi-sdk-nodejs](https://github.com/larksuite/oapi-sdk-nodejs): Larksuite official Node.js SDK
+
+#### PHP
+
+- [guanguans/notify](https://github.com/guanguans/notify): 多平台推送通知 SDK
 
 #### Python
 
@@ -39,6 +44,11 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 ### Middlewares
 
 - [go-lark/lark-gin](https://github.com/go-lark/lark-gin): Gin Middleware for go-lark
+
+## Bots
+
+- [Chatopera 飞书 Custom App](https://github.com/chatopera/chatopera.feishu): 通过 Feishu 开放平台和 Chatopera 机器人平台上线企业聊天机器人服务。
+- [giphy-bot](https://github.com/go-lark/examples/tree/main/giphy-bot): A giphy bot which is built with go-lark/gin/gorm as an real world example.
 
 ## Tools
 
