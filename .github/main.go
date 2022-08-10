@@ -131,7 +131,7 @@ func BuildReadme(metas []*Meta) (string, error) {
 }
 
 func WriteReadme(text string) error {
-	return ioutil.WriteFile("README.md", []byte(text), 0644)
+	return ioutil.WriteFile("README.md", []byte(text), 0o644)
 }
 
 var readmeTemplate = `# awesome-lark [![Awesome](https://github.com/sindresorhus/awesome/raw/main/media/badge.svg)](https://github.com/sindresorhus/awesome)
@@ -177,7 +177,7 @@ Pull Request are welcomed.
 
 ## License
 
-Copyright (c) David Zhang, 2021. Licensed under CC0 1.0 Universal.
+Copyright (c) David Zhang, 2022. Licensed under CC0 1.0 Universal.
 `
 
 func getRepoDesc(category, fullname, desc string) string {
