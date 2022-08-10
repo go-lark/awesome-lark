@@ -9,7 +9,8 @@
           "https://github.com/chyroc/lark",
           "https://github.com/larksuite/oapi-sdk-go",
           "https://github.com/fastwego/feishu",
-          "https://github.com/galaxy-book/feishu-sdk-golang"
+          "https://github.com/galaxy-book/feishu-sdk-golang",
+          "https://github.com/go-lark/docs"
         ]
       },
       {
