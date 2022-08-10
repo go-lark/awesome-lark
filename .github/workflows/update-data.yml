@@ -23,6 +23,8 @@ jobs:
       - name: Update Data
         run: |
           make
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and Push
         run: |
