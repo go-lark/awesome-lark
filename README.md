@@ -18,6 +18,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 - [larksuite/oapi-sdk-go(★117)](https://github.com/larksuite/oapi-sdk-go): larksuite oapi sdk by golang
 - [fastwego/feishu(★145)](https://github.com/fastwego/feishu): [飞书] A fast feishu development sdk written in Golang
 - [star-table/feishu-sdk-golang(★90)](https://github.com/star-table/feishu-sdk-golang): 飞书开放平台 SDK，聚合SDK https://github.com/galaxy-book/saturn
+- [go-lark/docs(★1)](https://github.com/go-lark/docs): 
 
 #### Java
 
