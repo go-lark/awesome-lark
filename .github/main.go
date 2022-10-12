@@ -1,3 +1,4 @@
+// Package main .
 package main
 
 import (
@@ -11,6 +12,7 @@ import (
 	"os"
 	"strings"
 	"text/template"
+	"time"
 
 	"github.com/google/go-github/github"
 	"golang.org/x/oauth2"
@@ -19,28 +21,36 @@ import (
 var githubClient *github.Client
 
 func main() {
-	InitGithubClient()
-
-	metas, err := LoadMetaJson()
+	// init github client
+	initGitHubClient()
+	// load template
+	tpl, err := loadTemplate()
 	if err != nil {
 		log.Fatalln(err)
 		return
 	}
-
-	text, err := BuildReadme(metas)
+	// load meta
+	meta, err := loadMetaJSON()
 	if err != nil {
 		log.Fatalln(err)
 		return
 	}
-
-	if err = WriteReadme(text); err != nil {
+	pageData := PageData{
+		Meta: meta,
+		Year: time.Now().Year(),
+	}
+	// build and write
+	text, err := buildREADME(tpl, pageData)
+	if err != nil {
+		log.Fatalln(err)
+		return
+	}
+	if err = writeREADME(text); err != nil {
 		log.Fatalln(err)
 	}
 }
 
-// github
-
-func InitGithubClient() {
+func initGitHubClient() {
 	ts := oauth2.StaticTokenSource(
 		&oauth2.Token{AccessToken: os.Getenv("GITHUB_TOKEN")},
 	)
@@ -48,7 +58,7 @@ func InitGithubClient() {
 	githubClient = github.NewClient(tc)
 }
 
-func GetGitHubRepo(repoURL string) (*github.Repository, error) {
+func getGitHubRepo(repoURL string) (*github.Repository, error) {
 	u, _ := url.Parse(repoURL)
 	path := strings.Split(u.Path, "/")
 	if len(path) < 3 {
@@ -62,8 +72,13 @@ func GetGitHubRepo(repoURL string) (*github.Repository, error) {
 	return res, err
 }
 
-// meta json
+// PageData .
+type PageData struct {
+	Meta []*Meta
+	Year int
+}
 
+// Meta json
 type Meta struct {
 	Category      string          `json:"category"`
 	Children      []*Meta         `json:"children"`
@@ -71,6 +86,7 @@ type Meta struct {
 	ReposWithInfo []*RepoWithInfo `json:"-"`
 }
 
+// RepoWithInfo .
 type RepoWithInfo struct {
 	Name            string
 	URL             string
@@ -78,7 +94,16 @@ type RepoWithInfo struct {
 	StargazersCount int
 }
 
-func LoadMetaJson() ([]*Meta, error) {
+func loadTemplate() (string, error) {
+	tpl, err := ioutil.ReadFile("README.md.template")
+	if err != nil {
+		return "", err
+	}
+
+	return string(tpl), nil
+}
+
+func loadMetaJSON() ([]*Meta, error) {
 	bs, err := ioutil.ReadFile("meta.json")
 	if err != nil {
 		return nil, err
@@ -96,7 +121,7 @@ func LoadMetaJson() ([]*Meta, error) {
 			}
 		}
 		for _, repoURL := range meta.Repos {
-			repo, err := GetGitHubRepo(repoURL)
+			repo, err := getGitHubRepo(repoURL)
 			if err != nil {
 				return err
 			}
@@ -118,67 +143,19 @@ func LoadMetaJson() ([]*Meta, error) {
 	return metas, err
 }
 
-// readme and template
-
-func BuildReadme(metas []*Meta) (string, error) {
-	t, err := template.New("").Parse(readmeTemplate)
+func buildREADME(tpl string, pageData PageData) (string, error) {
+	t, err := template.New("").Parse(tpl)
 	if err != nil {
 		return "", err
 	}
 	buf := new(bytes.Buffer)
-	err = t.Execute(buf, metas)
+	err = t.Execute(buf, pageData)
 	return buf.String(), err
 }
 
-func WriteReadme(text string) error {
+func writeREADME(text string) error {
 	return ioutil.WriteFile("README.md", []byte(text), 0o644)
 }
-
-var readmeTemplate = `# awesome-lark [![Awesome](https://github.com/sindresorhus/awesome/raw/main/media/badge.svg)](https://github.com/sindresorhus/awesome)
-
-A curated list of awesome Feishu/Lark APIs, libraries, and resources.
-
-## Platforms
-
-- [飞书开放平台](https://open.feishu.cn/)
-- [LARK Developer](https://open.larksuite.com/)
-
-## Libraries
-
-{{ range . }}### {{ .Category }}
-{{ if gt (len .Children) 0 }}{{ range .Children }}#### {{ .Category }}
-{{ range .ReposWithInfo }}- [{{ .Name }}(★{{ .StargazersCount}})]({{ .URL }}): {{ .Description }}
-{{ end }}
-{{ end }}
-{{ else }}
-{{ range .ReposWithInfo }}- [{{ .Name }}(★{{ .StargazersCount}})]({{ .URL }}): {{ .Description }}
-{{ end }}
-{{ end }}
-{{ end }}
-
-## Bots
-
-- [Chatopera 飞书 Custom App](https://github.com/chatopera/chatopera.feishu): 通过 Feishu 开放平台和 Chatopera 机器人平台上线企业聊天机器人服务。
-- [giphy-bot](https://github.com/go-lark/examples/tree/main/giphy-bot): A giphy bot which is built with go-lark/gin/gorm as an real world example.
-
-## Tools
-
-- [Card Builder](https://open.feishu.cn/tool/cardbuilder)
-
-## Resources
-
-- [开放平台文档](https://open.feishu.cn/document/home/index)
-- [Development documentation](https://open.larksuite.com/document/home/index)
-- [消息卡片设计规范](https://open.feishu.cn/document/ukTMukTMukTM/ugDOwYjL4gDM24CO4AjN)
-
-## Contributing
-
-Pull Request are welcomed.
-
-## License
-
-Copyright (c) David Zhang, 2022. Licensed under CC0 1.0 Universal.
-`
 
 func getRepoDesc(category, fullname, desc string) string {
 	if desc != "" {
