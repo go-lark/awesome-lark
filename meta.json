@@ -50,7 +50,8 @@
   {
     "category": "Middlewares",
     "repos": [
-      "https://github.com/go-lark/lark-gin"
+      "https://github.com/go-lark/lark-gin",
+      "https://github.com/go-lark/lark-hertz"
     ]
   }
 ]
