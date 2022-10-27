@@ -22,8 +22,8 @@
       {
         "category": "JavaScript",
         "repos": [
-          "https://github.com/dizys/lark-js-sdk",
-          "https://github.com/larksuite/oapi-sdk-nodejs"
+          "https://github.com/larksuite/node-sdk",
+          "https://github.com/dizys/lark-js-sdk"
         ]
       },
       {
