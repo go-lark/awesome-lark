@@ -87,7 +87,6 @@ func loadMetadata(pageData *PageData) error {
 	if err = yaml.Unmarshal(b, &pageData); err != nil {
 		return err
 	}
-	return nil
 
 	var loadRepoInfo func([]Metadata) error
 	loadRepoInfo = func(md []Metadata) error {
