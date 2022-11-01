@@ -1,0 +1,34 @@
+metadata:
+  - category: SDK
+    languages:
+      - language: Go
+        repos:
+          - https://github.com/go-lark/lark
+          - https://github.com/chyroc/lark
+          - https://github.com/larksuite/oapi-sdk-go
+          - https://github.com/fastwego/feishu
+          - https://github.com/galaxy-book/feishu-sdk-golang
+          - https://github.com/go-lark/docs
+      - language: Java
+        repos:
+          - https://github.com/larksuite/oapi-sdk-java
+      - language: JavaScript
+        repos:
+          - https://github.com/larksuite/node-sdk
+          - https://github.com/dizys/lark-js-sdk
+      - language: PHP
+        repos:
+          - https://github.com/guanguans/notify
+      - language: Python
+        repos:
+          - https://github.com/larksuite/feishu
+          - https://github.com/larksuite/oapi-sdk-python
+      - language: Ruby
+        repos:
+          - https://github.com/seandong/lark-ruby-sdk
+  - category: Middleware
+    languages:
+      - language: Go
+        repos:
+          - https://github.com/go-lark/lark-gin
+          - https://github.com/go-lark/lark-hertz
