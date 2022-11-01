@@ -9,11 +9,11 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 ## Libraries
 
-{{ range .Metadata.Category }}### {{ .Category }}
+{{ range .Metadata }}### {{ .Category }}
 
 {{ range .Languages }}#### {{ .Language }}
 
-{{ range .ReposWithInfo }}- [{{ .Name }}(★{{ .StargazersCount}})]({{ .URL }}): {{ .Description }}
+{{ range .ReposWithInfo }}- [{{ .Name }}(★{{ .StargazersCount}})]({{ .URL }}){{ if gt (len .Description) 0 }}: {{ .Description }}{{end}}
 {{ end }}
 {{ end }}
 {{ end }}
