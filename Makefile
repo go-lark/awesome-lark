@@ -1,5 +1,6 @@
 all: generate
 
 generate:
-	( cd .github && go build -o /tmp/awesome-lark-generate main.go )
+	( cd ./cmd/build && go build -o /tmp/awesome-lark-generate )
+	cd ../..
 	/tmp/awesome-lark-generate

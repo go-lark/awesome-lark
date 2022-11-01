@@ -4,7 +4,6 @@ package main
 import (
 	"bytes"
 	"context"
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -16,6 +15,7 @@ import (
 
 	"github.com/google/go-github/github"
 	"golang.org/x/oauth2"
+	"gopkg.in/yaml.v2"
 )
 
 var githubClient *github.Client
@@ -30,15 +30,13 @@ func main() {
 		return
 	}
 	// load meta
-	meta, err := loadMetaJSON()
+	var pageData PageData
+	err = loadMetadata(&pageData)
 	if err != nil {
 		log.Fatalln(err)
 		return
 	}
-	pageData := PageData{
-		Meta: meta,
-		Year: time.Now().Year(),
-	}
+	pageData.Year = time.Now().Year()
 	// build and write
 	text, err := buildREADME(tpl, pageData)
 	if err != nil {
@@ -58,7 +56,7 @@ func initGitHubClient() {
 	githubClient = github.NewClient(tc)
 }
 
-func getGitHubRepo(repoURL string) (*github.Repository, error) {
+func getRepoInfo(repoURL string) (*github.Repository, error) {
 	u, _ := url.Parse(repoURL)
 	path := strings.Split(u.Path, "/")
 	if len(path) < 3 {
@@ -72,28 +70,6 @@ func getGitHubRepo(repoURL string) (*github.Repository, error) {
 	return res, err
 }
 
-// PageData .
-type PageData struct {
-	Meta []*Meta
-	Year int
-}
-
-// Meta json
-type Meta struct {
-	Category      string          `json:"category"`
-	Children      []*Meta         `json:"children"`
-	Repos         []string        `json:"repos"`
-	ReposWithInfo []*RepoWithInfo `json:"-"`
-}
-
-// RepoWithInfo .
-type RepoWithInfo struct {
-	Name            string
-	URL             string
-	Description     string
-	StargazersCount int
-}
-
 func loadTemplate() (string, error) {
 	tpl, err := ioutil.ReadFile("README.md.template")
 	if err != nil {
@@ -103,44 +79,41 @@ func loadTemplate() (string, error) {
 	return string(tpl), nil
 }
 
-func loadMetaJSON() ([]*Meta, error) {
-	bs, err := ioutil.ReadFile("meta.json")
+func loadMetadata(pageData *PageData) error {
+	b, err := ioutil.ReadFile("meta.yaml")
 	if err != nil {
-		return nil, err
+		return err
 	}
-	var metas []*Meta
-	if err = json.Unmarshal(bs, &metas); err != nil {
-		return nil, err
+	if err = yaml.Unmarshal(b, &pageData); err != nil {
+		return err
 	}
 
-	var loadMetaRepos func(meta *Meta) error
-	loadMetaRepos = func(meta *Meta) error {
-		for _, v := range meta.Children {
-			if err = loadMetaRepos(v); err != nil {
-				return err
+	var loadRepoInfo func([]Metadata) error
+	loadRepoInfo = func(md []Metadata) error {
+		for i, cate := range md {
+			for j, lang := range cate.Languages {
+				for _, url := range lang.Repos {
+					repo, err := getRepoInfo(url)
+					if err != nil {
+						return err
+					}
+					md[i].Languages[j].ReposWithInfo = append(
+						md[i].Languages[j].ReposWithInfo,
+						&RepoWithInfo{
+							Name:            repo.GetFullName(),
+							URL:             repo.GetHTMLURL(),
+							Description:     getRepoDesc(lang.Language, repo.GetFullName(), repo.GetDescription()),
+							StargazersCount: repo.GetStargazersCount(),
+						},
+					)
+				}
 			}
-		}
-		for _, repoURL := range meta.Repos {
-			repo, err := getGitHubRepo(repoURL)
-			if err != nil {
-				return err
-			}
-			meta.ReposWithInfo = append(meta.ReposWithInfo, &RepoWithInfo{
-				Name:            repo.GetFullName(),
-				URL:             repo.GetHTMLURL(),
-				Description:     getRepoDesc(meta.Category, repo.GetFullName(), repo.GetDescription()),
-				StargazersCount: repo.GetStargazersCount(),
-			})
 		}
 		return nil
 	}
+	err = loadRepoInfo(pageData.Metadata)
 
-	for _, v := range metas {
-		if err = loadMetaRepos(v); err != nil {
-			return nil, err
-		}
-	}
-	return metas, err
+	return err
 }
 
 func buildREADME(tpl string, pageData PageData) (string, error) {
