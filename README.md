@@ -14,8 +14,8 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 #### Go
 
 - [go-lark/lark(★122)](https://github.com/go-lark/lark): An easy-to-use SDK for Feishu and Lark Open Platform (Messaging API only)
-- [chyroc/lark(★265)](https://github.com/chyroc/lark): Feishu/Lark Open API Go SDK, Support ALL Open API and Event Callback.
-- [larksuite/oapi-sdk-go(★141)](https://github.com/larksuite/oapi-sdk-go): larksuite oapi sdk by golang
+- [chyroc/lark(★266)](https://github.com/chyroc/lark): Feishu/Lark Open API Go SDK, Support ALL Open API and Event Callback.
+- [larksuite/oapi-sdk-go(★142)](https://github.com/larksuite/oapi-sdk-go): larksuite oapi sdk by golang
 - [fastwego/feishu(★149)](https://github.com/fastwego/feishu): [飞书] A fast feishu development sdk written in Golang
 - [star-table/feishu-sdk-golang(★93)](https://github.com/star-table/feishu-sdk-golang): 飞书开放平台 SDK，聚合SDK https://github.com/galaxy-book/saturn
 - [go-lark/docs(★1)](https://github.com/go-lark/docs): 提供便捷的 Lark 云文档操作能力
