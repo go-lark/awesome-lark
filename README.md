@@ -40,7 +40,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 #### Ruby
 
-- [seandong/lark-ruby-sdk(★15)](https://github.com/seandong/lark-ruby-sdk): Ruby SDKs for Lark(飞书) API https://open.feishu.cn/
+- [seandong/lark-ruby-sdk(★16)](https://github.com/seandong/lark-ruby-sdk): Ruby SDKs for Lark(飞书) API https://open.feishu.cn/
 
 
 ### Middleware
