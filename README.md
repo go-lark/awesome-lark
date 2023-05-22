@@ -22,7 +22,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 #### Java
 
-- [larksuite/oapi-sdk-java(★123)](https://github.com/larksuite/oapi-sdk-java): Larksuite official Java SDK
+- [larksuite/oapi-sdk-java(★124)](https://github.com/larksuite/oapi-sdk-java): Larksuite official Java SDK
 
 #### JavaScript
 
