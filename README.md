@@ -15,18 +15,18 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 - [go-lark/lark(★157)](https://github.com/go-lark/lark): An easy-to-use SDK for Feishu and Lark Open Platform (Messaging API only)
 - [chyroc/lark(★339)](https://github.com/chyroc/lark): Feishu(飞书)/Lark Open API Go SDK, Support ALL Open API and Event Callback.
-- [larksuite/oapi-sdk-go(★260)](https://github.com/larksuite/oapi-sdk-go): larksuite oapi sdk by golang
+- [larksuite/oapi-sdk-go(★261)](https://github.com/larksuite/oapi-sdk-go): larksuite oapi sdk by golang
 - [fastwego/feishu(★155)](https://github.com/fastwego/feishu): [飞书] A fast feishu development sdk written in Golang
 - [star-table/feishu-sdk-golang(★98)](https://github.com/star-table/feishu-sdk-golang): 飞书开放平台 SDK, 欢迎体验我们的产品 http://app.startable.cn
 - [go-lark/docs(★2)](https://github.com/go-lark/docs): 提供便捷的 Lark 云文档操作能力
 
 #### Java
 
-- [larksuite/oapi-sdk-java(★139)](https://github.com/larksuite/oapi-sdk-java): Larksuite official Java SDK
+- [larksuite/oapi-sdk-java(★138)](https://github.com/larksuite/oapi-sdk-java): Larksuite official Java SDK
 
 #### JavaScript
 
-- [larksuite/node-sdk(★84)](https://github.com/larksuite/node-sdk): larksuite open sdk for nodejs
+- [larksuite/node-sdk(★85)](https://github.com/larksuite/node-sdk): larksuite open sdk for nodejs
 - [dizys/lark-js-sdk(★5)](https://github.com/dizys/lark-js-sdk): Third-party JavaScript Lark (Feishu, 飞书) SDK written in TypeScript
 
 #### PHP
@@ -36,7 +36,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 #### Python
 
 - [larksuite/feishu(★71)](https://github.com/larksuite/feishu): [ 🚧 WIP ] feishu: Python SDK for Lark / Feishu
-- [larksuite/oapi-sdk-python(★120)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
+- [larksuite/oapi-sdk-python(★121)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
 
 #### Ruby
 
