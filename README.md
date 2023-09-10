@@ -31,12 +31,12 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 #### PHP
 
-- [guanguans/notify(★544)](https://github.com/guanguans/notify): 推送通知 sdk(Bark、Chanify、钉钉群机器人、Discord、邮件、飞书群机器人、Gitter、Google Chat、iGot、Logger、Mattermost、Microsoft Teams、Now Push、Ntfy、PushBack、Push、PushDeer、Pushover、PushPlus、QQ 频道机器人、Rocket Chat、Server 酱、Showdoc Push、Slack、Telegram、Webhook、企业微信群机器人、息知、一封传话、Zulip)。
+- [guanguans/notify(★545)](https://github.com/guanguans/notify): 推送通知 sdk(Bark、Chanify、钉钉群机器人、Discord、邮件、飞书群机器人、Gitter、Google Chat、iGot、Logger、Mattermost、Microsoft Teams、Now Push、Ntfy、PushBack、Push、PushDeer、Pushover、PushPlus、QQ 频道机器人、Rocket Chat、Server 酱、Showdoc Push、Slack、Telegram、Webhook、企业微信群机器人、息知、一封传话、Zulip)。
 
 #### Python
 
 - [larksuite/feishu(★71)](https://github.com/larksuite/feishu): [ 🚧 WIP ] feishu: Python SDK for Lark / Feishu
-- [larksuite/oapi-sdk-python(★140)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
+- [larksuite/oapi-sdk-python(★141)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
 
 #### Ruby
 
