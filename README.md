@@ -31,7 +31,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 #### PHP
 
-- [guanguans/notify(★573)](https://github.com/guanguans/notify): Push notification sdk(Bark、Chanify、DingTalk、Discord、Email、FeiShu、Gitter、Google Chat、iGot、Logger、Mattermost、Microsoft Teams、Now Push、Ntfy、PushBack、Push、PushDeer、Pushover、PushPlus、QQ Channel Bot、Rocket Chat、ServerChan、Showdoc Push、Slack、Telegram、Webhook、WeWork、XiZhi、YiFengChuanHua、Zulip).
+- [guanguans/notify(★574)](https://github.com/guanguans/notify): Push notification sdk(Bark、Chanify、DingTalk、Discord、Email、FeiShu、Gitter、Google Chat、iGot、Logger、Mattermost、Microsoft Teams、Now Push、Ntfy、PushBack、Push、PushDeer、Pushover、PushPlus、QQ Channel Bot、Rocket Chat、ServerChan、Showdoc Push、Slack、Telegram、Webhook、WeWork、XiZhi、YiFengChuanHua、Zulip).
 
 #### Python
 
@@ -74,4 +74,4 @@ Pull Request are welcomed.
 
 ## License
 
-Copyright (c) David Zhang, 2023. Licensed under CC0 1.0 Universal.
+Copyright (c) David Zhang, 2024. Licensed under CC0 1.0 Universal.
