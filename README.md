@@ -47,7 +47,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 #### Go
 
-- [go-lark/lark-gin(★2)](https://github.com/go-lark/lark-gin): Gin Middleware for go-lark
+- [go-lark/lark-gin(★3)](https://github.com/go-lark/lark-gin): Gin Middleware for go-lark
 - [go-lark/lark-hertz(★0)](https://github.com/go-lark/lark-hertz): Hertz Middleware for go-lark
 
 
