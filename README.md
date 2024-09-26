@@ -13,8 +13,8 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 #### Go
 
-- [go-lark/lark(★200)](https://github.com/go-lark/lark): An easy-to-use SDK for Feishu and Lark Open Platform (Instant Messaging API only)
-- [chyroc/lark(★412)](https://github.com/chyroc/lark): Feishu(飞书)/Lark Open API Go SDK, Support ALL Open API and Event Callback.
+- [go-lark/lark(★201)](https://github.com/go-lark/lark): An easy-to-use SDK for Feishu and Lark Open Platform (Instant Messaging API only)
+- [chyroc/lark(★413)](https://github.com/chyroc/lark): Feishu(飞书)/Lark Open API Go SDK, Support ALL Open API and Event Callback.
 - [larksuite/oapi-sdk-go(★416)](https://github.com/larksuite/oapi-sdk-go): larksuite oapi sdk by golang
 - [fastwego/feishu(★160)](https://github.com/fastwego/feishu): [飞书] A fast feishu development sdk written in Golang
 - [star-table/feishu-sdk-golang(★103)](https://github.com/star-table/feishu-sdk-golang): 飞书开放平台 SDK, 欢迎体验我们的产品 http://app.startable.cn
@@ -22,7 +22,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 #### Java
 
-- [larksuite/oapi-sdk-java(★228)](https://github.com/larksuite/oapi-sdk-java): Larksuite official Java SDK
+- [larksuite/oapi-sdk-java(★227)](https://github.com/larksuite/oapi-sdk-java): Larksuite official Java SDK
 
 #### JavaScript
 
@@ -36,7 +36,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 #### Python
 
 - [larksuite/feishu(★80)](https://github.com/larksuite/feishu): [ 🚧 WIP ] feishu: Python SDK for Lark / Feishu
-- [larksuite/oapi-sdk-python(★321)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
+- [larksuite/oapi-sdk-python(★322)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
 
 #### Ruby
 
