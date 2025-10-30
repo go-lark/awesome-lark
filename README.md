@@ -13,7 +13,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 #### Go
 
-- [go-lark/lark(★229)](https://github.com/go-lark/lark): An easy-to-use SDK for Feishu and Lark Open Platform (Instant Messaging API only)
+- [go-lark/lark(★228)](https://github.com/go-lark/lark): An easy-to-use SDK for Feishu and Lark Open Platform (Instant Messaging API only)
 - [chyroc/lark(★455)](https://github.com/chyroc/lark): Feishu(飞书)/Lark Open API Go SDK, Support ALL Open API and Event Callback.
 - [larksuite/oapi-sdk-go(★504)](https://github.com/larksuite/oapi-sdk-go): larksuite oapi sdk by golang
 - [fastwego/feishu(★161)](https://github.com/fastwego/feishu): [飞书] A fast feishu development sdk written in Golang
@@ -31,12 +31,12 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 #### PHP
 
-- [guanguans/notify(★658)](https://github.com/guanguans/notify): Push notification SDK(AnPush、Bark、Chanify、DingTalk、Discord、Gitter、GoogleChat、IGot、Lark、Mattermost、MicrosoftTeams、NowPush、Ntfy、Push、Pushback、PushBullet、PushDeer、PushMe、Pushover、PushPlus、QQ、RocketChat、ServerChan、ShowdocPush、SimplePush、Slack、Telegram、WeWork、WPush、XiZhi、YiFengChuanHua、Zulip).
+- [guanguans/notify(★659)](https://github.com/guanguans/notify): Push notification SDK(AnPush、Bark、Chanify、DingTalk、Discord、Gitter、GoogleChat、IGot、Lark、Mattermost、MicrosoftTeams、NowPush、Ntfy、Push、Pushback、PushBullet、PushDeer、PushMe、Pushover、PushPlus、QQ、RocketChat、ServerChan、ShowdocPush、SimplePush、Slack、Telegram、WeWork、WPush、XiZhi、YiFengChuanHua、Zulip).
 
 #### Python
 
 - [larksuite/feishu(★82)](https://github.com/larksuite/feishu): [ 🚧 WIP ] feishu: Python SDK for Lark / Feishu
-- [larksuite/oapi-sdk-python(★430)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
+- [larksuite/oapi-sdk-python(★429)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
 
 #### Ruby
 
