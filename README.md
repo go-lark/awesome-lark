@@ -36,7 +36,7 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 #### Python
 
 - [larksuite/feishu(★86)](https://github.com/larksuite/feishu): [ 🚧 WIP ] feishu: Python SDK for Lark / Feishu
-- [larksuite/oapi-sdk-python(★526)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
+- [larksuite/oapi-sdk-python(★527)](https://github.com/larksuite/oapi-sdk-python): Larksuite development interface SDK
 
 #### Ruby
 
@@ -57,7 +57,6 @@ A curated list of awesome Feishu/Lark APIs, libraries, and resources.
 
 - [Chatopera 飞书 Custom App](https://github.com/chatopera/chatopera.feishu): 通过 Feishu 开放平台和 Chatopera 机器人平台上线企业聊天机器人服务。
 - [giphy-bot](https://github.com/go-lark/examples/tree/main/giphy-bot): A giphy bot which is built with go-lark/gin/gorm as an real world example.
-- [Hermes Tag](https://github.com/DanielLi202/hermes-tag): A Claude-Tag-style context-selection layer — @-mention it in a Feishu/Lark group and it replies in-thread from bounded per-chat memory (also supports Slack; built on Hermes Agent).
 
 ## Tools
 
